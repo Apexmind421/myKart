@@ -1,0 +1,154 @@
+
+.product {
+    padding: 20px;
+    margin: 10px;
+    background-color: white;
+    height: max-content;
+    display: flex;
+    flex-flow: row;
+  }
+  
+.product_left{
+    float:left;
+    margin: 0px;
+    width:70%;
+    box-sizing: border-box;
+    margin:0px;
+    display: flex;
+    flex-flow: column;
+}
+  .product_title{
+    font-size: 21px;
+    display: flex;
+    font-weight: 700;
+    margin: 0px; 
+    padding: 0px;
+  }
+
+.product_rating{
+    display: flex;
+    flex-direction: row;
+    margin:0px;
+    padding: 0px;
+}
+
+.product_bestpricetag{
+    color:black;
+    font-weight: 600;
+    margin: 0px 0px;
+}
+
+.product_price{
+    margin: 0px;
+}
+.product_total_price {
+    font-size: 25px;
+    font-weight: 550;
+    margin: 0px 0px;
+   }
+
+.product_discount{
+    color: green;
+    font-size: small;
+}
+
+.product_avail_offers{
+    font-size:14px;
+    font-weight: 500;
+    margin: 0px;
+}
+
+.product_offers{
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.product_avail_offers_list{
+    margin:5px;
+}
+
+.product_offers_list{
+    margin: 0px;
+    font-weight: 600;
+}
+
+
+
+.product_description{
+    font-size: 14px;
+    margin-top:18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.product_description_1{
+    font-weight: 600;
+    font-size: 14.55px;
+    padding-right: 25px;
+    float:left;
+}
+
+.product_description_2{
+    position: relative;
+    overflow: hidden;
+    line-height: 1.5em;
+}
+
+.product_specification{
+    font-size: 14px;
+    margin-top:10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.product_specification_1{
+    font-weight: 600;
+    font-size: 14.55px;
+    padding-right: 25px;
+    float:left;
+    margin: 0px;
+}
+.product_specification_2{
+    margin:0px;
+    overflow: hidden;
+}
+.product_right{
+    position: sticky;
+    top: 4px;
+    height: 100%;
+    width:40%;
+    margin-left:20px;
+    box-sizing: border-box;
+    margin:0px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.product_right_1{
+    cursor: crosshair;
+}
+
+.product_right_2{
+    display: flex;
+    flex-direction: column;
+}
+
+.product_right_2 > button {
+    background: #f0c14b;
+    border: 1px solid;
+    margin-top: 10px;
+    padding: 5px;
+    border-color: #a88734 #9c7e31 #846a29;
+    color: rgb(6, 13, 56);
+    font-weight: 600;
+    min-width: auto;
+}
+
+.product_link{
+    color: #111;
+    text-decoration: none;
+}

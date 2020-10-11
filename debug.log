@@ -1,0 +1,2 @@
+[1011/002030.409:ERROR:settings.cc(430)] Settings version is not 5
+[1011/143621.134:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\PhanindraJBR\AppData\Local\Microsoft\Edge\User Data\Crashpad\attachments\0426c5ad-06a0-4d85-be8a-8aec729c7389: The system cannot find the path specified. (0x3)

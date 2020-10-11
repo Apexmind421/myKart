@@ -1,0 +1,29 @@
+.Checkout {
+  
+    padding: 20px;
+    background-color: white;
+    height: max-content;
+  }
+  
+.Checkout_Cart{
+    
+    display: flex;
+    flex-direction: row;
+}
+
+.Checkout_Products{
+    padding: 0px 20px;
+    width: 70%;  
+}
+
+  .Checkout_Title {
+    margin-right: 10px;
+    padding: 10px;
+    border-bottom: 1px solid lightgray;
+  }
+
+  .Checkout_Sum{
+      padding: 20px 100px 10px 10px;
+  }
+
+  

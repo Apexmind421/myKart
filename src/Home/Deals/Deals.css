@@ -1,0 +1,46 @@
+.home{
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.home_row{
+    display:flex;
+    flex-direction: column;
+    z-index: 10;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: white;
+}
+
+.home_hot_deals{
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 1px;
+    padding-right: 10px;
+}
+.home_hot_deals_title { 
+    font-weight: 700;
+    display: inline-block;
+}
+
+
+.home_hot_deals_link{
+    font-weight: 600;
+    color: rgb(14, 2, 27);
+    z-index: 10;
+}
+
+
+.home_hot_deals_products{
+    display:flex;
+    flex-direction: row;
+}
+
+.home_image{
+    width: 100%;
+    /*mask-image: linear-gradient(to bottom, rgba(0,0,0,1),rgba(0,0,0,0));*/
+    z-index: -1;
+    margin-bottom: -150px;
+    height: 300px;
+}
