@@ -35,7 +35,7 @@ export const LogIn = (user) => {
             //Cookie.set('userInfo', JSON.stringify(data));
         } 
         catch (error) {
-            dispatch({ type: "USER_SIGNIN_FAIL", payload: error.message });
+            dispatch({ type: "SIGNIN_FAIL", payload: error.message });
         }
     }
 }
