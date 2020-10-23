@@ -9,6 +9,9 @@ import Product from './Product/Product';
 import Banner3 from './Images/MI02.jpg';
 import Login from './Login/Login';
 import Products from './Product/Products';
+import Register from './Login/Register';
+import SubHeader from './Header/SubHeader';
+import Cart from './Checkout/Cart';
 
 function App() {
   return (
@@ -17,14 +20,26 @@ function App() {
         <Switch>
           <Route path="/" exact>
             <Header/>
+            <SubHeader/>
             <Home/>      
           </Route>
           <Route path="/checkout">
             <Header/>
             <Checkout />
           </Route>
+          <Route path="/cart:id?quantity=:quantity">
+            <Header/>
+            <Cart />
+          </Route>
           <Route path="/login">
             <Login />
+          </Route>
+          <Route path="/Register">
+            <Register/>
+          </Route>
+          <Route path="/products/:id">
+            <Header/>
+            <Products/>
           </Route>
           <Route path="/products">
             <Header/>

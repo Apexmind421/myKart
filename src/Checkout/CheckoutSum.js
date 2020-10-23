@@ -1,13 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './CheckoutSum.css';
 import CurrencyFormat from "react-currency-format";
 import { useStateValue } from "../StateProvider/StateProvider";
-import { getCartTotal } from "../StateProvider/reducer";
+import { getCartTotal } from "../StateProvider/cartReducer";
 import { useHistory } from "react-router-dom";
+import { addToCart, removeFromCart } from '../StateProvider/Actions/cartAction';
+import { useDispatch, useSelector } from 'react-redux';
 
-function CheckoutSum() {
-    const history = useHistory();
-    const [{ cart }, dispatch] = useStateValue();
+function CheckoutSum(props) {
+   // const history = useHistory();
+   //const [{ cart }, dispatch] = useStateValue();
+   const cartItems = useSelector(state => state.cart);
+   const { cart } = cartItems;
+    //const cart = useSelector(state => state.cart);
+    //const { cartItems } = cart;
     return (
         <div className="CheckoutSum">
         <CurrencyFormat
@@ -29,7 +35,7 @@ function CheckoutSum() {
             prefix={"Rs"}
         />
 
-        <button onClick={e => history.push('/payment')}>Proceed to Checkout</button>
+        <button onClick={e => props.history.push('/payment')}>Proceed to Checkout</button>
         </div>
     )
 }

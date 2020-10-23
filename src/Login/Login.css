@@ -69,6 +69,11 @@
     border: 1px solid;
     margin-top: 10px;
     background: #d38c30;
-    color: white;
     border-color: darkgray;
+  }
+
+  .login_registerButton_Link{
+    text-decoration: none;
+    margin:0px;
+    color: white;
   }

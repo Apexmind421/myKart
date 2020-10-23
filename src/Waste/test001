@@ -1,5 +1,16 @@
  SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8
- 
+ {
+	"email": "abc.421002@gmail.com",
+	"password": "123452kjj"
+	 
+}
+{
+	"firstName": "Baba002",
+	"lastName": "Rabbit002",
+	"email": "abc.421003@gmail.com",
+	"password": "123452kjj"
+	 
+}
  Test001
                {/* <Link to="/" className="login_link"><img className="login_logo" src={Logo} alt="logo"/></Link>
                 <>{Register === "true" && <>

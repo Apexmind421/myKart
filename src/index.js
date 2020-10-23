@@ -12,13 +12,13 @@ window.store = store;
 
 ReactDOM.render(
   <Provider store={store}>
-  <React.StrictMode>
-  
-    <StateProvider initialState={initialState} reducer={reducer}>
-      <App />
-    </StateProvider>
-  
-  </React.StrictMode>
+    <React.StrictMode>
+
+     {/* <StateProvider initialState={initialState} reducer={reducer}>*/}
+        <App />
+     {/* </StateProvider>*/}
+
+    </React.StrictMode>
   </Provider>,
   document.getElementById('root')
 );

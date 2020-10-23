@@ -1,24 +1,11 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import "./ProductItem.css";
-import { useStateValue } from "../StateProvider/StateProvider";
+
 import { Link } from "react-router-dom";
 
-function ProductItem({id,title,image,price,discount}) {
-  const [{ cart }, dispatch] = useStateValue();
 
-  const addToCart = () => {
-    // dispatch the item into the data layer
-    dispatch({
-      type: "ADD_TO_CART",
-      item: {
-        id: id,
-        title: title,
-        image: image,
-        price: price,
-        discount: discount,
-      },
-    });
-  };
+function ProductItem({id,title,image,price,discount}) {
+ 
 
   return (
     

@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import Logo from './logo.png'
 import "./Header.css"
 import { Link } from "react-router-dom";
@@ -8,16 +8,41 @@ import PersonIcon from '@material-ui/icons/Person';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import LockOpenIcon from '@material-ui/icons/LockOpen';
 import { useStateValue } from "../StateProvider/StateProvider";
+import { useDispatch, useSelector } from 'react-redux';
+import { addToCart,FetchCart } from "../StateProvider/Actions/cartAction";
 
 function Header() {
-    const [{ cart, user }, dispatch] = useStateValue();
-/*
-    const handleAuthenticaton = () => {
-      if (user) {
-        auth.signOut();
-      }
+    const cartItems = useSelector(state => state.cart);
+    const { loading, cart, error } = cartItems;
+    const auth = useSelector(state => state.auth);
+    const { userInfo } = auth;
+    const dispatch = useDispatch();
+    console.log("XXXXXX "+JSON.stringify(userInfo));
+    //const cartItems1= cart.length;
+    //console.log("cartItems1 numer is "+cartItems1);
+    console.log("cartItems1 numer is here "+cart);
+    /*
+        const handleAuthenticaton = () => {
+          if (user) {
+            auth.signOut();
+          }
+        }
+    */
+    
+    useEffect(() => {
+        if(userInfo){
+            dispatch(FetchCart());
+        }
+        return () => {
+            
+        }
+    }, [])
+
+    const logOut = (e) => {
+        e.preventDefault();
+        dispatch({ type: "LOGOUT" });
     }
-*/
+
     return (
         <nav className="header">
             <Link to="/">
@@ -30,39 +55,59 @@ function Header() {
             </div>
 
             <div className="header_nav">
-                <Link to="/login" className="header_link">
-                    <div className="header_option_three">
-                        <LockOpenIcon/>
-                        <span>Login</span>
-                    </div>
-                </Link>
-                <Link to="/login" className="header_link">
-                    <div className="header_option_three">    
-                        <PersonIcon/>
-                        <span>My Account</span>
-                    </div>
-                </Link>
+            
+                {userInfo ?
+                    <>
+                        <div className="header_nav_options">
+                            <span>Hi {userInfo.user.firstName}</span>
+                        </div>
+                        <div className="header_nav_options">
+                            <Link to="/" className="header_link">
+                                <div>
+                                    <PersonIcon />
+                                    <span>My Account</span>
+                                </div>
+                            </Link>
+                        </div>
+                        <div className="header_nav_options">
+                                <div className="header_logout" onClick={logOut}>
+                                    <LockOpenIcon />
+                                    <span>
+                                        Log out
+                                    </span>
+                                </div>
+                        </div>
+                    </> :
+                    <>
+                        <div className="header_nav_options">
+                            <Link to="/login" className="header_link">
+                                <div>
+                                    <LockOpenIcon />
+                                    <span>Login</span>
+                                </div>
+                            </Link>
+                        </div>
+                    </>
+                }
+                <div className="header_nav_options">
+                    <Link to="/" className="header_link">
+                        <div>
+                            <span>More</span>
+                            <ArrowDropDownIcon />
+                        </div>
+                    </Link>
+                </div>
 
-                <Link to="/" className="header_link">
-                    <div className="header_option_three">
-                        <span>More</span>
-                        <ArrowDropDownIcon />
-                    </div>
-                </Link>
-               
-                <Link to="/" className="header_link">
-                    <div className="header_option">
-                        <span className="header_option_one">Deliver to</span>
-                        <span className="header_option_two">VIC 300</span>
-                    </div>
-                </Link>
-                
                 <Link to="/checkout" className="header_link">
                     <div className="header_option_three">
                         <ShoppingBasketIcon />
-                        <span className="header_option_two">{cart?.length}</span>
+                        {cart?
+                        <span className="header_option_two">{cart.length}</span>:
+                        <span className="header_option_two">0</span>
+                        }
                     </div>
                 </Link>
+           
             </div>
         </nav>
     );

@@ -11,7 +11,7 @@ function Deals() {
         <div className="home_row">
                 <div className="home_hot_deals">
                         <h2 className="home_hot_deals_title">Deals of the day{/*🔥*/}</h2>
-                        <Link to="/" className="home_hot_deals_link">
+                        <Link to="/products" className="home_hot_deals_link">
                             <span>
                                 View All
                             </span>

@@ -1,17 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './CheckoutProduct.css';
 import { useStateValue } from "../StateProvider/StateProvider";
+import { removeFromCart } from '../StateProvider/Actions/cartAction';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
-function CheckoutProduct({ id, image, title, price, discount, hideButton }) {
-    const [{ cart }, dispatch] = useStateValue();
-
-    const removeFromCart = () => {
+function CheckoutProduct({id,title,image,price,discount,hideButton}) {
+    //const [{ cart }, dispatch] = useStateValue();
+    //const cart = useSelector(state => state.cart);
+    //const { cartItems } = cart;
+    
+    const dispatch = useDispatch();
+    const removeFromCart = (e) => {
         // remove the item from the cart
-        dispatch({
-            type: 'REMOVE_FROM_CART',
-            id: id,
-        })
-    }
+        dispatch(removeFromCart(id));
+    };
+
+    useEffect(() => {
+      }, []);
 
     return (
         <div className='CheckoutProduct'>
@@ -32,10 +38,11 @@ function CheckoutProduct({ id, image, title, price, discount, hideButton }) {
                         <p>🌟</p>
                     ))}
                 </div>
-                */}
+              
                 {!hideButton && (
                     <button onClick={removeFromCart}>Remove from Cart</button>
                 )}
+                  */}
             </div>
         </div>
     )

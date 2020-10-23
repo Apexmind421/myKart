@@ -1,0 +1,74 @@
+cart.forEach(cartItem=>{
+    data.forEach((productDetail, i)=>{
+      if(cartItem.id === productDetail._id){
+        data[i
+            ].quantity = cartItem.quantity;
+        }
+    })
+})
+  [
+    {
+        "reviews": [],
+        "_id": "5f8abf4d77a1443540aff485",
+        "name": "OnePlus 8A",
+        "slug": "OnePlus-8A",
+        "price": 10000,
+        "quantity": "10",
+        "description": "OnePlus 8A 256GB Storage 8 GB RAM Silver",
+        "category": "5f6db218edbb9c033842ed79",
+        "createdBy": "5f6c63c0e1fac009880b5155",
+        "productImages": [
+            {
+                "_id": "5f8abf4d77a1443540aff486",
+                "img": "ZZLDpU7dQ-oneplus-8-pro-b078bn2h3r-original-imafu8emeypvc3vy.jpeg"
+            },
+            {
+                "_id": "5f8abf4d77a1443540aff487",
+                "img": "BfzWT0KTlF-oneplus-8-pro-b078bn2h3r-original-imafuagnfzgehqte.jpeg"
+            }
+        ],
+        "createdAt": "2020-10-17T09:54:21.501Z",
+        "updatedAt": "2020-10-17T09:54:21.501Z",
+        "__v": 0
+    },
+    {
+        "reviews": [],
+        "_id": "5f8ac0dc77a1443540aff496",
+        "name": "iPhone 12 mini 256GB Storage 8GB RAM Blue",
+        "slug": "iPhone-12-mini-256GB-Storage-8GB-RAM-Blue",
+        "price": 80000,
+        "quantity": "10",
+        "description": "iPhone 12 mini 256GB Storage 8GB RAM Blue",
+        "category": "5f6db218edbb9c033842ed79",
+        "createdBy": "5f6c63c0e1fac009880b5155",
+        "productImages": [
+            {
+                "_id": "5f8ac0dc77a1443540aff497",
+                "img": "xIiTZtme2-Apple-iPhone-12-mini.jpg"
+            }
+        ],
+        "createdAt": "2020-10-17T10:01:00.312Z",
+        "updatedAt": "2020-10-17T10:01:00.312Z",
+        "__v": 0
+    },
+    {
+        "reviews": [],
+        "_id": "5f8c3358c5ae8727045d942b",
+        "name": "iPhone 12 mini 256GB Storage 8GB RAM Blue",
+        "slug": "iPhone-12-mini-256GB-Storage-8GB-RAM-Blue",
+        "price": 80000,
+        "quantity": "10",
+        "description": "iPhone 12 mini 256GB Storage 8GB RAM Blue",
+        "category": "5f882fb5cfdfbb3a5c6d4c5d",
+        "createdBy": "5f6c63c0e1fac009880b5155",
+        "productImages": [
+            {
+                "_id": "5f8c3358c5ae8727045d942c",
+                "img": "xSRwcBzK4-Apple-iPhone-12-mini.jpg"
+            }
+        ],
+        "createdAt": "2020-10-18T12:21:44.730Z",
+        "updatedAt": "2020-10-18T12:21:44.730Z",
+        "__v": 0
+    }
+]
